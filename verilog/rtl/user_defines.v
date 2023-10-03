@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2022 Efabless Corporation
+S// SPDX-FileCopyrightText: 2022 Efabless Corporation
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@
 `define GPIO_MODE_MGMT_STD_OUTPUT          13'h1809
 `define GPIO_MODE_MGMT_STD_BIDIRECTIONAL   13'h1801
 `define GPIO_MODE_MGMT_STD_ANALOG          13'h000b
-
+ 
 `define GPIO_MODE_USER_STD_INPUT_NOPULL    13'h0402
 `define GPIO_MODE_USER_STD_INPUT_PULLDOWN  13'h0c00
 `define GPIO_MODE_USER_STD_INPUT_PULLUP    13'h0800
@@ -39,6 +39,7 @@
 `define GPIO_MODE_USER_STD_BIDIRECTIONAL   13'h1800
 `define GPIO_MODE_USER_STD_OUT_MONITORED   13'h1802
 `define GPIO_MODE_USER_STD_ANALOG          13'h000a
+
 
 // The power-on configuration for GPIO 0 to 4 is fixed and cannot be
 // modified (allowing the SPI and debug to always be accessible unless
