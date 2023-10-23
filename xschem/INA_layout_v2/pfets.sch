@@ -59,7 +59,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_hvt
 spiceprefix=X
 }
-C {sky130_fd_pr/pfet_01v8_hvt.sym} 40 -240 0 0 {name=M3
+C {sky130_fd_pr/pfet_01v8_hvt.sym} 40 -240 0 0 {name=M3[1:0]
 L=1
 W=1
 nf=1

@@ -38,7 +38,7 @@ C {devices/iopin.sym} -180 0 2 0 {name=p4 lab=VG1}
 C {devices/iopin.sym} 180 0 2 1 {name=p5 lab=VG2}
 C {devices/iopin.sym} -50 120 3 1 {name=p6 lab=VD1}
 C {devices/iopin.sym} 50 120 3 1 {name=p7 lab=VD2}
-C {sky130_fd_pr/pfet_01v8_hvt.sym} -270 -180 0 0 {name=M3[1:0]
+C {sky130_fd_pr/pfet_01v8_hvt.sym} -270 -180 0 0 {name=M3[4:1]
 L=1
 W=1
 nf=1
