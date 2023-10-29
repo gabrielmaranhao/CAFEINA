@@ -55,6 +55,14 @@ N -190 -90 -150 -90 {
 lab=VB2}
 N -150 -90 -150 -40 {
 lab=VB2}
+N -370 -230 -370 -170 {
+lab=AVSS}
+N -370 -170 -330 -170 {
+lab=AVSS}
+N -330 -230 -330 -170 {
+lab=AVSS}
+N -370 -230 -330 -230 {
+lab=AVSS}
 C {devices/iopin.sym} -410 -110 0 1 {name=p1 lab=IREF}
 C {devices/iopin.sym} -270 -90 0 1 {name=p2 lab=VB1}
 C {devices/iopin.sym} -190 -90 0 1 {name=p3 lab=VB2}
@@ -64,3 +72,18 @@ C {INA_layout_v2/bias/nfet_2series.sym} -410 -40 0 1 {name=x1[5:1]}
 C {INA_layout_v2/bias/nfet_2series.sym} -270 -40 0 0 {name=x2[5:1]}
 C {INA_layout_v2/bias/nfet_2series.sym} -190 -40 0 1 {name=x3[5:1]}
 C {INA_layout_v2/bias/nfet_2series.sym} -50 -40 0 0 {name=x4[5:1]}
+C {devices/lab_wire.sym} -330 -230 0 1 {name=p6 sig_type=std_logic lab=AVSS}
+C {sky130_fd_pr/nfet_01v8.sym} -350 -200 0 1 {name=M1
+L=1
+W=1
+nf=1 
+mult=44
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}

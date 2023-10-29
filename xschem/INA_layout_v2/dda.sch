@@ -197,7 +197,6 @@ C {devices/lab_wire.sym} 410 250 2 1 {name=p47 sig_type=std_logic lab=AVSS}
 C {devices/lab_wire.sym} 850 250 2 1 {name=p48 sig_type=std_logic lab=AVSS}
 C {devices/lab_wire.sym} 1350 250 2 1 {name=p49 sig_type=std_logic lab=AVSS}
 C {INA_layout_v2/pfets_8x.sym} -390 -390 0 0 {name=x1}
-C {INA_layout_v2/pfets_8x.sym} 1100 -390 0 0 {name=x8}
 C {INA_layout_v2/pfets_4x.sym} -650 -130 0 0 {name=x2}
 C {INA_layout_v2/pfets_4x.sym} -130 -130 0 0 {name=x3}
 C {INA_layout_v2/pfets_4x.sym} 410 -130 0 0 {name=x6}
@@ -208,3 +207,4 @@ C {INA_layout_v2/nfets_2x.sym} 850 130 0 0 {name=x10}
 C {INA_layout_v2/nfets_2x.sym} 1350 130 0 1 {name=x11}
 C {INA_layout_v2/nfets_4x.sym} 1100 390 0 0 {name=x12}
 C {INA_layout_v2/nfets_4x.sym} 410 390 0 0 {name=x4}
+C {INA_layout_v2/pfets_4x.sym} 1100 -390 0 0 {name=x8}
