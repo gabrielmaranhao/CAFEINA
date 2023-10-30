@@ -106,7 +106,7 @@ x3[4] AVDD AVDD VB1 VB2 pfet_2series
 x3[3] AVDD AVDD VB1 VB2 pfet_2series
 x3[2] AVDD AVDD VB1 VB2 pfet_2series
 x3[1] AVDD AVDD VB1 VB2 pfet_2series
-XM1 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=112
+XM1 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=96
 .ends
 
 * expanding   symbol:  INA_layout_v2/bias/pfet_2series.sym # of pins=4

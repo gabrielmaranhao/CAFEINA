@@ -24,9 +24,9 @@ lab=VO1}
 N 330 -120 380 -120 {
 lab=VO2}
 N -230 -130 160 -130 {
-lab=AVDD_ESD}
+lab=#net1}
 N -230 -130 -230 -40 {
-lab=AVDD_ESD}
+lab=#net1}
 N -550 30 -490 30 {
 lab=IREF}
 N -10 -30 40 -30 {
@@ -99,14 +99,8 @@ N 310 250 310 270 {
 lab=AVSS}
 N 230 220 280 220 {
 lab=VCM}
-N -320 -180 -320 -160 {
-lab=AVDD}
-N -320 -100 -320 -80 {
-lab=AVSS}
-N -410 -130 -350 -130 {
-lab=AVDD}
 N -290 -130 -230 -130 {
-lab=AVDD_ESD}
+lab=AVDD}
 C {devices/iopin.sym} -550 30 0 1 {name=p1 lab=IREF}
 C {INA_layout_v2/dda.sym} 130 -40 0 0 {name=x1}
 C {devices/iopin.sym} -610 -280 0 1 {name=p2 lab=VI_1A}
@@ -116,7 +110,7 @@ C {devices/iopin.sym} 260 -280 0 1 {name=p5 lab=VI_2B}
 C {devices/iopin.sym} 380 -120 0 0 {name=p6 lab=VO2}
 C {devices/iopin.sym} 380 40 0 0 {name=p7 lab=VO1}
 C {devices/iopin.sym} 230 220 0 1 {name=p8 lab=VCM}
-C {devices/iopin.sym} -410 -130 0 1 {name=p9 lab=AVDD}
+C {devices/iopin.sym} -290 -130 0 1 {name=p9 lab=AVDD}
 C {devices/iopin.sym} 160 140 0 0 {name=p10 lab=AVSS}
 C {devices/lab_wire.sym} 20 10 0 0 {name=p11 sig_type=std_logic lab=VB1}
 C {devices/lab_wire.sym} 20 30 0 0 {name=p12 sig_type=std_logic lab=VB2}
@@ -160,7 +154,3 @@ C {devices/lab_wire.sym} 270 -60 0 0 {name=p40 sig_type=std_logic lab=VO2_ESD}
 C {devices/lab_wire.sym} 390 220 0 1 {name=p41 sig_type=std_logic lab=VCM_ESD}
 C {devices/lab_wire.sym} 120 140 0 0 {name=p42 sig_type=std_logic lab=VCM_ESD}
 C {devices/lab_wire.sym} -410 30 0 1 {name=p43 sig_type=std_logic lab=IREF_ESD}
-C {ESD/ESD.sym} -320 -130 0 1 {name=x11}
-C {devices/lab_wire.sym} -320 -180 0 0 {name=p44 sig_type=std_logic lab=AVDD}
-C {devices/lab_wire.sym} -320 -80 0 1 {name=p45 sig_type=std_logic lab=AVSS}
-C {devices/lab_wire.sym} -270 -130 0 1 {name=p46 sig_type=std_logic lab=AVDD_ESD}
