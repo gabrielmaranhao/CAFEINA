@@ -15,457 +15,157 @@ Cell pin lists are equivalent.
 Device classes sky130_fd_pr__pfet_01v8_hvt and sky130_fd_pr__pfet_01v8_hvt are equivalent.
 Flattening unmatched subcell pfet_2series in circuit pbias_vb123 (0)(105 instances)
 
-Class pbias_vb123 (1):  Merged 48 parallel devices.
+Class pbias_vb123 (1):  Merged 95 parallel devices.
 Subcircuit summary:
 Circuit 1: pbias_vb123                     |Circuit 2: pbias_vb123                     
 -------------------------------------------|-------------------------------------------
-sky130_fd_pr__pfet_01v8_hvt (306->211)     |sky130_fd_pr__pfet_01v8_hvt (306->258) **M 
-Number of devices: 211 **Mismatch**        |Number of devices: 258 **Mismatch**        
-Number of nets: 109 **Mismatch**           |Number of nets: 157 **Mismatch**           
+sky130_fd_pr__pfet_01v8_hvt (306->211)     |sky130_fd_pr__pfet_01v8_hvt (306->211)     
+Number of devices: 211                     |Number of devices: 211                     
+Number of nets: 109 **Mismatch**           |Number of nets: 154 **Mismatch**           
 ---------------------------------------------------------------------------------------
 NET mismatches: Class fragments follow (with fanout counts):
 Circuit 1: pbias_vb123                     |Circuit 2: pbias_vb123                     
 
 ---------------------------------------------------------------------------------------
 Net: AVDD                                  |Net: AVDD                                  
-  sky130_fd_pr__pfet_01v8_hvt/4 = 211      |  sky130_fd_pr__pfet_01v8_hvt/4 = 258      
-  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 107  |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 153  
-  sky130_fd_pr__pfet_01v8_hvt/2 = 1        |  sky130_fd_pr__pfet_01v8_hvt/2 = 48       
+  sky130_fd_pr__pfet_01v8_hvt/4 = 211      |  sky130_fd_pr__pfet_01v8_hvt/4 = 211      
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 107  |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 62   
+  sky130_fd_pr__pfet_01v8_hvt/2 = 1        |  sky130_fd_pr__pfet_01v8_hvt/2 = 1        
                                            |                                           
-(no matching net)                          |Net: a_777_4980#                           
+(no matching net)                          |Net: a_5228_2589#                          
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_5680_2589#                          
+(no matching net)                          |Net: a_4002_4980#                          
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_2002_5589#                          
+(no matching net)                          |Net: a_2260_n3972#                         
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_2712_5589#                          
+(no matching net)                          |Net: a_5228_n3085#                         
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_5680_1220#                          
+(no matching net)                          |Net: a_5228_1968#                          
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_777_n1581#                          
+(no matching net)                          |Net: a_4002_n2468#                         
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_5680_n5336#                         
+(no matching net)                          |Net: a_2260_2589#                          
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_777_n5336#                          
+(no matching net)                          |Net: a_5228_4093#                          
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_5680_n2468#                         
+(no matching net)                          |Net: a_4002_n3972#                         
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_3228_5589#                          
+(no matching net)                          |Net: a_2260_1968#                          
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_5680_1968#                          
+(no matching net)                          |Net: a_5228_n1581#                         
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_777_1220#                           
+(no matching net)                          |Net: a_2260_4093#                          
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_5680_n962#                          
+(no matching net)                          |Net: a_2260_n4589#                         
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_5680_n3972#                         
+(no matching net)                          |Net: a_4002_2589#                          
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_5680_4093#                          
+(no matching net)                          |Net: a_4002_n4589#                         
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_5680_n3085#                         
+(no matching net)                          |Net: a_4002_1968#                          
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_777_n3085#                          
+(no matching net)                          |Net: a_5228_n2468#                         
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_5680_5589#                          
+(no matching net)                          |Net: a_4002_4093#                          
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_5680_599#                           
+(no matching net)                          |Net: a_2260_n3085#                         
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_777_n962#                           
+(no matching net)                          |Net: a_5228_n3972#                         
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_777_599#                            
+(no matching net)                          |Net: a_5228_3476#                          
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_3744_n5336#                         
+(no matching net)                          |Net: a_5228_4980#                          
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_4454_n5336#                         
+(no matching net)                          |Net: a_4002_n3085#                         
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_777_5589#                           
+(no matching net)                          |Net: a_2260_3476#                          
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_1486_n5336#                         
+(no matching net)                          |Net: a_2260_n1581#                         
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_3744_5589#                          
+(no matching net)                          |Net: a_2260_4980#                          
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_777_n2468#                          
+(no matching net)                          |Net: a_4002_n1581#                         
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_5680_n1581#                         
+(no matching net)                          |Net: a_5228_n4589#                         
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_777_2589#                           
+(no matching net)                          |Net: a_4002_3476#                          
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_777_n3972#                          
+(no matching net)                          |Net: a_2260_n2468#                         
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_5680_n4589#                         
+(no matching net)                          |Net: a_4002_599#                           
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_2002_n5336#                         
+(no matching net)                          |Net: a_4002_1220#                          
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_777_1968#                           
+(no matching net)                          |Net: a_2260_134#                           
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_1486_5589#                          
+(no matching net)                          |Net: a_4002_n962#                          
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_777_4093#                           
+(no matching net)                          |Net: a_4002_134#                           
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_5680_n495#                          
+(no matching net)                          |Net: a_5228_n495#                          
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_4970_n5336#                         
+(no matching net)                          |Net: a_5228_599#                           
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_2712_n5336#                         
+(no matching net)                          |Net: a_2260_n495#                          
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_5680_134#                           
+(no matching net)                          |Net: a_5228_1220#                          
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_5680_3476#                          
+(no matching net)                          |Net: a_2260_599#                           
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_777_134#                            
+(no matching net)                          |Net: a_5228_n962#                          
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_4454_5589#                          
+(no matching net)                          |Net: a_4002_n495#                          
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_5680_4980#                          
+(no matching net)                          |Net: a_2260_1220#                          
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_777_n4589#                          
+(no matching net)                          |Net: a_5228_134#                           
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
                                            |                                           
-(no matching net)                          |Net: a_4970_5589#                          
+(no matching net)                          |Net: a_2260_n962#                          
                                            |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
-                                           |                                           
-(no matching net)                          |Net: a_777_n495#                           
-                                           |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
-                                           |                                           
-(no matching net)                          |Net: a_777_3476#                           
-                                           |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
-                                           |                                           
-(no matching net)                          |Net: a_3228_n5336#                         
-                                           |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    
----------------------------------------------------------------------------------------
-DEVICE mismatches: Class fragments follow (with node fanout counts):
-Circuit 1: pbias_vb123                     |Circuit 2: pbias_vb123                     
-
----------------------------------------------------------------------------------------
-Instance: sky130_fd_pr__pfet_01v8_hvt:M1   |Instance: sky130_fd_pr__pfet_01v8_hvt:2    
-  (1,3) = (319,319)                        |  (1,3) = (459,1)                          
-  2 = 319                                  |  2 = 459                                  
-  4 = 319                                  |  4 = 459                                  
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:5    
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:9    
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:10   
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:13   
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:15   
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:18   
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:19   
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:25   
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:30   
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:32   
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:37   
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:45   
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:47   
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:51   
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:62   
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:63   
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:65   
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:66   
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:71   
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:82   
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:83   
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:86   
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:87   
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:95   
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:96   
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:102  
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:110  
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:114  
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:122  
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:130  
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:133  
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:136  
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:150  
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:153  
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:158  
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:159  
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:175  
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:182  
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:186  
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:196  
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:200  
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:208  
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:210  
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:259  
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:262  
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:287  
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: sky130_fd_pr__pfet_01v8_hvt:293  
-                                           |  (1,3) = (459,1)                          
-                                           |  2 = 459                                  
-                                           |  4 = 459                                  
-                                           |                                           
 ---------------------------------------------------------------------------------------
 Netlists do not match.
 
