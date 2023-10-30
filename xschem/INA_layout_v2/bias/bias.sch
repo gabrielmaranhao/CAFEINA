@@ -34,5 +34,5 @@ C {devices/lab_wire.sym} -40 80 0 0 {name=p8 sig_type=std_logic lab=AVSS}
 C {devices/lab_wire.sym} 100 -130 0 1 {name=p9 sig_type=std_logic lab=AVDD}
 C {INA_layout_v2/bias/nbias_vb124.sym} 0 150 0 0 {name=x1}
 C {INA_layout_v2/bias/pbias_vb123.sym} 0 -200 0 0 {name=x2}
-C {INA_layout_v2/bias/nbias_vb3.sym} -40 0 0 0 {name=x3}
 C {INA_layout_v2/bias/pbias_vb4.sym} 100 -50 0 0 {name=x4}
+C {INA_layout_v2/bias/nbias_vb3.sym} -40 0 0 0 {name=x3}
