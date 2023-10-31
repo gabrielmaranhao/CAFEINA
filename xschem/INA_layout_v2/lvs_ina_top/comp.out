@@ -1,0 +1,234 @@
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8_hvt and Circuit 2 cell sky130_fd_pr__pfet_01v8_hvt are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8_hvt is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8_hvt is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__pfet_01v8_hvt     |Circuit 2: sky130_fd_pr__pfet_01v8_hvt     
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__pfet_01v8_hvt and sky130_fd_pr__pfet_01v8_hvt are equivalent.
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__res_high_po_0p35 and Circuit 2 cell sky130_fd_pr__res_high_po_0p35 are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__res_high_po_0p35 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__res_high_po_0p35 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__res_high_po_0p35  |Circuit 2: sky130_fd_pr__res_high_po_0p35  
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__res_high_po_0p35 and sky130_fd_pr__res_high_po_0p35 are equivalent.
+Flattening unmatched subcell dda in circuit ina_top (0)(1 instance)
+Flattening unmatched subcell pfets_8x in circuit ina_top (0)(1 instance)
+Flattening unmatched subcell pfets_4x in circuit ina_top (0)(8 instances)
+Flattening unmatched subcell pfets in circuit ina_top (0)(32 instances)
+Flattening unmatched subcell nfets_2x in circuit ina_top (0)(3 instances)
+Flattening unmatched subcell nfets in circuit ina_top (0)(6 instances)
+Flattening unmatched subcell nfets_4x in circuit ina_top (0)(2 instances)
+Flattening unmatched subcell nfets_2x in circuit ina_top (0)(4 instances)
+Flattening unmatched subcell nfets in circuit ina_top (0)(8 instances)
+Flattening unmatched subcell bias in circuit ina_top (0)(1 instance)
+Flattening unmatched subcell nbias_vb124 in circuit ina_top (0)(1 instance)
+Flattening unmatched subcell nfet_2series in circuit ina_top (0)(20 instances)
+Flattening unmatched subcell pbias_vb123 in circuit ina_top (0)(1 instance)
+Flattening unmatched subcell pfet_2series in circuit ina_top (0)(105 instances)
+Flattening unmatched subcell pbias_vb4 in circuit ina_top (0)(1 instance)
+Flattening unmatched subcell nbias_vb3 in circuit ina_top (0)(1 instance)
+Flattening unmatched subcell nfet_2series in circuit ina_top (0)(2 instances)
+Flattening unmatched subcell ESD in circuit ina_top (0)(8 instances)
+
+Cell ina_top (1) disconnected node: VO2
+Class ina_top (0):  Merged 227 parallel devices.
+Class ina_top (1):  Merged 3087 parallel devices.
+Cell ina_top (1) disconnected node: VO2
+Subcircuit summary:
+Circuit 1: ina_top                         |Circuit 2: ina_top                         
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8_hvt (2837->239)    |sky130_fd_pr__pfet_01v8_hvt (2837->239)    
+sky130_fd_pr__nfet_01v8 (480->55)          |sky130_fd_pr__nfet_01v8 (480->55)          
+sky130_fd_pr__diode_pw2nd_05v5 (8)         |sky130_fd_pr__diode_pw2nd_05v5 (8)         
+sky130_fd_pr__diode_pw2nd_11v0 (40->8)     |sky130_fd_pr__diode_pw2nd_11v0 (40->8)     
+sky130_fd_pr__diode_pd2nw_05v5 (8)         |sky130_fd_pr__diode_pd2nw_05v5 (8)         
+sky130_fd_pr__diode_pd2nw_11v0 (40->8)     |sky130_fd_pr__diode_pd2nw_11v0 (40->8)     
+sky130_fd_pr__res_high_po_0p35 (8)         |sky130_fd_pr__res_high_po_0p35 (8)         
+Number of devices: 334                     |Number of devices: 334                     
+Number of nets: 171                        |Number of nets: 171                        
+---------------------------------------------------------------------------------------
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: ina_top                         |Circuit 2: ina_top                         
+
+---------------------------------------------------------------------------------------
+Net: VB4                                   |Net: VB4                                   
+  sky130_fd_pr__pfet_01v8_hvt/2 = 17       |  sky130_fd_pr__pfet_01v8_hvt/2 = 20       
+  sky130_fd_pr__nfet_01v8/(1|3) = 5        |  sky130_fd_pr__nfet_01v8/(1|3) = 7        
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 5    |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 6    
+                                           |                                           
+Net: AVDD                                  |Net: AVDD                                  
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 119  |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 119  
+  sky130_fd_pr__pfet_01v8_hvt/4 = 239      |  sky130_fd_pr__pfet_01v8_hvt/4 = 239      
+  sky130_fd_pr__pfet_01v8_hvt/2 = 1        |  sky130_fd_pr__pfet_01v8_hvt/2 = 1        
+  sky130_fd_pr__diode_pd2nw_05v5/cathode = |  sky130_fd_pr__diode_pd2nw_05v5/cathode = 
+  sky130_fd_pr__diode_pd2nw_11v0/cathode = |  sky130_fd_pr__diode_pd2nw_11v0/cathode = 
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: VCM                                   |Net: VCM                                   
+  sky130_fd_pr__diode_pw2nd_11v0/cathode = |  sky130_fd_pr__diode_pw2nd_11v0/cathode = 
+  sky130_fd_pr__diode_pd2nw_11v0/anode = 1 |  sky130_fd_pr__diode_pd2nw_11v0/anode = 1 
+  sky130_fd_pr__res_high_po_0p35/(1|2) = 1 |  sky130_fd_pr__res_high_po_0p35/(1|2) = 1 
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: VB3                                   |Net: VB3                                   
+  sky130_fd_pr__nfet_01v8/2 = 6            |  sky130_fd_pr__nfet_01v8/2 = 6            
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 35   |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 35   
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: VB2                                   |Net: VB2                                   
+  sky130_fd_pr__nfet_01v8/2 = 24           |  sky130_fd_pr__nfet_01v8/2 = 24           
+  sky130_fd_pr__nfet_01v8/(1|3) = 5        |  sky130_fd_pr__nfet_01v8/(1|3) = 5        
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 35   |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 35   
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: VB1                                   |Net: VB1                                   
+  sky130_fd_pr__pfet_01v8_hvt/2 = 212      |  sky130_fd_pr__pfet_01v8_hvt/2 = 212      
+  sky130_fd_pr__nfet_01v8/(1|3) = 5        |  sky130_fd_pr__nfet_01v8/(1|3) = 5        
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 35   |  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 35   
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: VCM_ESD                               |Net: VCM_ESD                               
+  sky130_fd_pr__nfet_01v8/2 = 2            |  sky130_fd_pr__nfet_01v8/2 = 2            
+  sky130_fd_pr__diode_pw2nd_05v5/cathode = |  sky130_fd_pr__diode_pw2nd_05v5/cathode = 
+  sky130_fd_pr__diode_pd2nw_05v5/anode = 1 |  sky130_fd_pr__diode_pd2nw_05v5/anode = 1 
+  sky130_fd_pr__res_high_po_0p35/(1|2) = 1 |  sky130_fd_pr__res_high_po_0p35/(1|2) = 1 
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: dda:1/VCMFB                           |Net: ESD_4.AVDD                            
+  sky130_fd_pr__pfet_01v8_hvt/2 = 3        |  sky130_fd_pr__diode_pd2nw_11v0/cathode = 
+  sky130_fd_pr__nfet_01v8/(1|3) = 2        |  sky130_fd_pr__diode_pd2nw_05v5/cathode = 
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    |                                           
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: VI_1B_ESD                             |Net: VI_1B_ESD                             
+  sky130_fd_pr__pfet_01v8_hvt/2 = 1        |  sky130_fd_pr__pfet_01v8_hvt/2 = 1        
+  sky130_fd_pr__diode_pw2nd_05v5/cathode = |  sky130_fd_pr__diode_pw2nd_05v5/cathode = 
+  sky130_fd_pr__diode_pd2nw_05v5/anode = 1 |  sky130_fd_pr__diode_pd2nw_05v5/anode = 1 
+  sky130_fd_pr__res_high_po_0p35/(1|2) = 1 |  sky130_fd_pr__res_high_po_0p35/(1|2) = 1 
+                                           |                                           
+Net: VI_2B_ESD                             |Net: VI_2B_ESD                             
+  sky130_fd_pr__pfet_01v8_hvt/2 = 1        |  sky130_fd_pr__pfet_01v8_hvt/2 = 1        
+  sky130_fd_pr__diode_pw2nd_05v5/cathode = |  sky130_fd_pr__diode_pw2nd_05v5/cathode = 
+  sky130_fd_pr__diode_pd2nw_05v5/anode = 1 |  sky130_fd_pr__diode_pd2nw_05v5/anode = 1 
+  sky130_fd_pr__res_high_po_0p35/(1|2) = 1 |  sky130_fd_pr__res_high_po_0p35/(1|2) = 1 
+                                           |                                           
+Net: VI_2A_ESD                             |Net: VI_2A_ESD                             
+  sky130_fd_pr__pfet_01v8_hvt/2 = 1        |  sky130_fd_pr__pfet_01v8_hvt/2 = 1        
+  sky130_fd_pr__diode_pw2nd_05v5/cathode = |  sky130_fd_pr__diode_pw2nd_05v5/cathode = 
+  sky130_fd_pr__diode_pd2nw_05v5/anode = 1 |  sky130_fd_pr__diode_pd2nw_05v5/anode = 1 
+  sky130_fd_pr__res_high_po_0p35/(1|2) = 1 |  sky130_fd_pr__res_high_po_0p35/(1|2) = 1 
+                                           |                                           
+Net: VI_1A_ESD                             |Net: VI_1A_ESD                             
+  sky130_fd_pr__pfet_01v8_hvt/2 = 1        |  sky130_fd_pr__pfet_01v8_hvt/2 = 1        
+  sky130_fd_pr__diode_pw2nd_05v5/cathode = |  sky130_fd_pr__diode_pw2nd_05v5/cathode = 
+  sky130_fd_pr__diode_pd2nw_05v5/anode = 1 |  sky130_fd_pr__diode_pd2nw_05v5/anode = 1 
+  sky130_fd_pr__res_high_po_0p35/(1|2) = 1 |  sky130_fd_pr__res_high_po_0p35/(1|2) = 1 
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: AVSS                                  |Net: AVSS                                  
+  sky130_fd_pr__nfet_01v8/(1|3) = 27       |  sky130_fd_pr__nfet_01v8/(1|3) = 27       
+  sky130_fd_pr__nfet_01v8/2 = 1            |  sky130_fd_pr__nfet_01v8/2 = 1            
+  sky130_fd_pr__nfet_01v8/4 = 55           |  sky130_fd_pr__nfet_01v8/4 = 55           
+  sky130_fd_pr__diode_pw2nd_05v5/anode = 8 |  sky130_fd_pr__diode_pw2nd_05v5/anode = 8 
+  sky130_fd_pr__diode_pw2nd_11v0/anode = 8 |  sky130_fd_pr__diode_pw2nd_11v0/anode = 8 
+  sky130_fd_pr__res_high_po_0p35/3 = 8     |  sky130_fd_pr__res_high_po_0p35/3 = 8     
+---------------------------------------------------------------------------------------
+DEVICE mismatches: Class fragments follow (with node fanout counts):
+Circuit 1: ina_top                         |Circuit 2: ina_top                         
+
+---------------------------------------------------------------------------------------
+Instance: ESD:10/sky130_fd_pr__diode_pd2nw |Instance: sky130_fd_pr__diode_pd2nw_11v0:2 
+  anode = 3                                |  anode = 3                                
+  cathode = 375                            |  cathode = 6                              
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Instance: ESD:10/sky130_fd_pr__diode_pd2nw |Instance: sky130_fd_pr__diode_pd2nw_05v5:6 
+  anode = 5                                |  anode = 5                                
+  cathode = 375                            |  cathode = 6                              
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Instance: dda:1/pfets_8x:1/pfets_4x:1[2]/p |Instance: sky130_fd_pr__pfet_01v8_hvt:6    
+  (1,3) = (375,375)                        |  (1,3) = (369,33)                         
+  2 = 375                                  |  2 = 33                                   
+  4 = 375                                  |  4 = 369                                  
+                                           |                                           
+Instance: dda:1/pfets_4x:8/pfets:1[4]/sky1 |Instance: sky130_fd_pr__pfet_01v8_hvt:2    
+  (1,3) = (375,6)                          |  (1,3) = (369,369)                        
+  2 = 6                                    |  2 = 369                                  
+  4 = 375                                  |  4 = 369                                  
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Instance: dda:1/pfets_4x:3/pfets:1[4]/sky1 |Instance: sky130_fd_pr__pfet_01v8_hvt:62   
+  (1,3) = (4,3)                            |  (1,3) = (4,3)                            
+  2 = 4                                    |  2 = 4                                    
+  4 = 375                                  |  4 = 369                                  
+                                           |                                           
+Instance: dda:1/pfets_4x:3/pfets:1[4]/sky1 |Instance: sky130_fd_pr__pfet_01v8_hvt:54   
+  (1,3) = (4,3)                            |  (1,3) = (4,3)                            
+  2 = 4                                    |  2 = 4                                    
+  4 = 375                                  |  4 = 369                                  
+                                           |                                           
+Instance: dda:1/pfets_4x:2/pfets:1[4]/sky1 |Instance: sky130_fd_pr__pfet_01v8_hvt:47   
+  (1,3) = (4,3)                            |  (1,3) = (4,3)                            
+  2 = 4                                    |  2 = 4                                    
+  4 = 375                                  |  4 = 369                                  
+                                           |                                           
+Instance: dda:1/pfets_4x:2/pfets:1[4]/sky1 |Instance: sky130_fd_pr__pfet_01v8_hvt:30   
+  (1,3) = (4,3)                            |  (1,3) = (4,3)                            
+  2 = 4                                    |  2 = 4                                    
+  4 = 375                                  |  4 = 369                                  
+---------------------------------------------------------------------------------------
+Netlists do not match.
+
+Subcircuit pins:
+Circuit 1: ina_top                         |Circuit 2: ina_top                         
+-------------------------------------------|-------------------------------------------
+AVDD                                       |(no matching pin)                          
+VCM                                        |VCM                                        
+Cell pin lists are equivalent.
+Device classes ina_top and ina_top are equivalent.
+
+Final result: Netlists do not match.
