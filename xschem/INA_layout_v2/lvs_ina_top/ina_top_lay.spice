@@ -1,6 +1,6 @@
 * NGSPICE file created from ina_top.ext - technology: sky130A
 
-.subckt ina_top VCM VI_1A VI_1B VI_2B VI_2A VO1 VO2 IREF AVDD AVSS
+.subckt ina_top VO2 VI_2A VI_2B VI_1B VI_1A IREF VCM VO1 AVDD AVSS
 X0 dda_0.VD6 dda_0.VCMFB AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=1
 X1 a_13371_n9266# VB1 AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=1
 X2 AVSS AVSS AVSS AVSS sky130_fd_pr__nfet_01v8 ad=0.145 pd=1.29 as=0 ps=0 w=1 l=1
@@ -543,6 +543,7 @@ X538 AVSS AVSS AVSS AVSS sky130_fd_pr__nfet_01v8 ad=0.145 pd=1.29 as=0 ps=0 w=1 
 X539 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0 ps=0 w=1 l=1
 X540 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.29 pd=2.58 as=0 ps=0 w=1 l=1
 X541 AVDD VB1 dda_0.VIT_P1 AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0.145 ps=1.29 w=1 l=1
+D0 AVSS VO2 sky130_fd_pr__diode_pw2nd_05v5 pj=1.8e+06 area=2.025e+11
 X542 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.29 pd=2.58 as=0 ps=0 w=1 l=1
 X543 dda_0.VCMFB dda_0.VCMFB AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=1
 X544 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0 ps=0 w=1 l=1
@@ -557,8 +558,8 @@ X552 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.29 pd=2.58 as=0 ps=0 w
 X553 AVSS AVSS AVSS AVSS sky130_fd_pr__nfet_01v8 ad=0.145 pd=1.29 as=0 ps=0 w=1 l=1
 X554 dda_0.VIT_N1 VO1 dda_0.VD1 AVSS sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0.145 ps=1.29 w=1 l=1
 X555 dda_0.VIT_P1 VI_1B dda_0.SUM_N AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.29 pd=2.58 as=0.145 ps=1.29 w=1 l=1
-X556 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.29 pd=2.58 as=0 ps=0 w=1 l=1
-X557 dda_0.SUM_N VI_2A dda_0.VIT_P2 AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=1
+X556 dda_0.SUM_N VI_2A dda_0.VIT_P2 AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=1
+X557 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.29 pd=2.58 as=0 ps=0 w=1 l=1
 X558 a_23429_n12663# IREF IREF AVSS sky130_fd_pr__nfet_01v8 ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=1
 X559 a_13371_n7762# VB1 AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=1
 X560 AVDD dda_0.VD2 dda_0.VD2 AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0.145 ps=1.29 w=1 l=1
@@ -1712,10 +1713,12 @@ X1707 AVSS AVSS AVSS AVSS sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0 ps=0 w=1 
 X1708 AVDD dda_0.VD1 dda_0.VD1 AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0.145 ps=1.29 w=1 l=1
 X1709 dda_0.VD2 dda_0.VD2 AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=1
 X1710 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.29 pd=2.58 as=0 ps=0 w=1 l=1
+D1 AVSS VI_1A sky130_fd_pr__diode_pw2nd_05v5 pj=1.8e+06 area=2.025e+11
 X1711 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.29 pd=2.58 as=0 ps=0 w=1 l=1
 X1712 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0 ps=0 w=1 l=1
 X1713 dda_0.SUM_N VI_1B dda_0.VIT_P1 AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.29 pd=2.58 as=0.145 ps=1.29 w=1 l=1
 X1714 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0 ps=0 w=1 l=1
+D2 AVSS VI_2B sky130_fd_pr__diode_pw2nd_05v5 pj=1.8e+06 area=2.025e+11
 X1715 dda_0.VIT_P1 VB1 AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0.145 ps=1.29 w=1 l=1
 X1716 dda_0.VIT_N2 VO2 dda_0.VD2 AVSS sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0.145 ps=1.29 w=1 l=1
 X1717 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0 ps=0 w=1 l=1
@@ -1800,10 +1803,12 @@ X1795 dda_0.VIT_P2 VB1 AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as
 X1796 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.29 pd=2.58 as=0 ps=0 w=1 l=1
 X1797 dda_0.VIT_N1 VB2 AVSS AVSS sky130_fd_pr__nfet_01v8 ad=0.145 pd=1.29 as=0.145 ps=1.29 w=1 l=1
 X1798 AVSS AVSS AVSS AVSS sky130_fd_pr__nfet_01v8 ad=0.145 pd=1.29 as=0 ps=0 w=1 l=1
+D3 AVSS VI_1B sky130_fd_pr__diode_pw2nd_05v5 pj=1.8e+06 area=2.025e+11
 X1799 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0 ps=0 w=1 l=1
 X1800 VB2 VB1 a_13371_n9266# AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0.145 ps=1.29 w=1 l=1
 X1801 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.29 pd=2.58 as=0 ps=0 w=1 l=1
 X1802 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.29 pd=2.58 as=0 ps=0 w=1 l=1
+D4 AVSS VI_2A sky130_fd_pr__diode_pw2nd_05v5 pj=1.8e+06 area=2.025e+11
 X1803 AVDD dda_0.VD2 dda_0.VD2 AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0.145 ps=1.29 w=1 l=1
 X1804 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.29 pd=2.58 as=0 ps=0 w=1 l=1
 X1805 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0 ps=0 w=1 l=1
@@ -2194,6 +2199,7 @@ X2189 AVSS AVSS AVSS AVSS sky130_fd_pr__nfet_01v8 ad=0.145 pd=1.29 as=0 ps=0 w=1
 X2190 dda_0.VCMFB dda_0.VCMFB AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0.145 ps=1.29 w=1 l=1
 X2191 AVSS AVSS AVSS AVSS sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0 ps=0 w=1 l=1
 X2192 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.29 pd=2.58 as=0 ps=0 w=1 l=1
+D5 AVSS IREF sky130_fd_pr__diode_pw2nd_05v5 pj=1.8e+06 area=2.025e+11
 X2193 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0 ps=0 w=1 l=1
 X2194 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.29 pd=2.58 as=0 ps=0 w=1 l=1
 X2195 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.29 pd=2.58 as=0 ps=0 w=1 l=1
@@ -2316,6 +2322,7 @@ X2311 dda_0.SUM_P VI_2B dda_0.VIT_P2 AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.29 pd
 X2312 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.29 pd=2.58 as=0 ps=0 w=1 l=1
 X2313 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0 ps=0 w=1 l=1
 X2314 VB3 VB1 a_16339_n15827# AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0.145 ps=1.29 w=1 l=1
+D6 AVSS VO1 sky130_fd_pr__diode_pw2nd_05v5 pj=1.8e+06 area=2.025e+11
 X2315 dda_0.VIT_P1 VB1 AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=1
 X2316 dda_0.VIT_P2 VI_2B dda_0.SUM_P AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.29 pd=2.58 as=0.145 ps=1.29 w=1 l=1
 X2317 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.29 pd=2.58 as=0 ps=0 w=1 l=1
@@ -2969,8 +2976,8 @@ X2964 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0 ps=0
 X2965 dda_0.VIT_P1 VB1 AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0.145 ps=1.29 w=1 l=1
 X2966 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.29 pd=2.58 as=0 ps=0 w=1 l=1
 X2967 dda_0.SUM_P VI_1A dda_0.VIT_P1 AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=1
-X2968 a_23429_n11758# IREF VB1 AVSS sky130_fd_pr__nfet_01v8 ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=1
-X2969 a_13371_n17331# VB1 AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=1
+X2968 a_13371_n17331# VB1 AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=1
+X2969 a_23429_n11758# IREF VB1 AVSS sky130_fd_pr__nfet_01v8 ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=1
 X2970 dda_0.VD1 dda_0.VD1 AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.29 pd=2.58 as=0.145 ps=1.29 w=1 l=1
 X2971 dda_0.VIT_P1 VB1 AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=1
 X2972 dda_0.VD6 dda_0.VCMFB AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0.145 ps=1.29 w=1 l=1
@@ -3099,6 +3106,7 @@ X3094 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0 ps=0
 X3095 AVDD dda_0.VCMFB dda_0.VD5 AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=1
 X3096 dda_0.VIT_P1 VI_1B dda_0.SUM_N AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=1
 X3097 dda_0.VIT_P2 VI_2A dda_0.SUM_N AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=1
+D7 AVSS VCM sky130_fd_pr__diode_pw2nd_05v5 pj=1.8e+06 area=2.025e+11
 X3098 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.29 pd=2.58 as=0 ps=0 w=1 l=1
 X3099 dda_0.VCMFB dda_0.VCMFB AVDD AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0.145 ps=1.29 w=1 l=1
 X3100 a_15629_n8649# VB1 VB2 AVDD sky130_fd_pr__pfet_01v8_hvt ad=0.145 pd=1.29 as=0.145 ps=1.29 w=1 l=1

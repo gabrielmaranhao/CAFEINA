@@ -53,7 +53,8 @@ Circuit 1: ina_top                         |Circuit 2: ina_top
 -------------------------------------------|-------------------------------------------
 sky130_fd_pr__pfet_01v8_hvt (2837->239)    |sky130_fd_pr__pfet_01v8_hvt (2837->239)    
 sky130_fd_pr__nfet_01v8 (480->55)          |sky130_fd_pr__nfet_01v8 (480->55)          
-Number of devices: 294                     |Number of devices: 294                     
+sky130_fd_pr__diode_pw2nd_05v5 (8)         |sky130_fd_pr__diode_pw2nd_05v5 (8)         
+Number of devices: 302                     |Number of devices: 302                     
 Number of nets: 163                        |Number of nets: 163                        
 ---------------------------------------------------------------------------------------
 Resolving symmetries by property value.

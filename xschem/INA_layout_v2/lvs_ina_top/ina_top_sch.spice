@@ -3,6 +3,14 @@
 *.PININFO IREF:B VI_1A:B VI_1B:B VI_2A:B VI_2B:B VO2:B VO1:B VCM:B AVDD:B AVSS:B
 x1 AVDD AVSS VI_1A VI_1B VO2 VO1 VCM VB1 VB2 VB3 VB4 VI_2A VI_2B dda
 x2 IREF VB1 AVDD AVSS VB2 VB3 VB4 bias
+D3 AVSS VI_2A sky130_fd_pr__diode_pw2nd_05v5 area=0.2025e12 pj=1.8e6
+D4 AVSS VI_2B sky130_fd_pr__diode_pw2nd_05v5 area=0.2025e12 pj=1.8e6
+D5 AVSS VI_1B sky130_fd_pr__diode_pw2nd_05v5 area=0.2025e12 pj=1.8e6
+D6 AVSS VI_1A sky130_fd_pr__diode_pw2nd_05v5 area=0.2025e12 pj=1.8e6
+D7 AVSS IREF sky130_fd_pr__diode_pw2nd_05v5 area=0.2025e12 pj=1.8e6
+D2 AVSS VO1 sky130_fd_pr__diode_pw2nd_05v5 area=0.2025e12 pj=1.8e6
+D1 AVSS VO2 sky130_fd_pr__diode_pw2nd_05v5 area=0.2025e12 pj=1.8e6
+D8 AVSS VCM sky130_fd_pr__diode_pw2nd_05v5 area=0.2025e12 pj=1.8e6
 .ends
 
 * expanding   symbol:  INA_layout_v2/dda.sym # of pins=13
