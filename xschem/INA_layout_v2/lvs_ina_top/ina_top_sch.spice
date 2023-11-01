@@ -1,16 +1,8 @@
 ** sch_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/ina_top.sch
 .subckt ina_top IREF VI_1A VI_1B VI_2A VI_2B VO2 VO1 VCM AVDD AVSS
 *.PININFO IREF:B VI_1A:B VI_1B:B VI_2A:B VI_2B:B VO2:B VO1:B VCM:B AVDD:B AVSS:B
-x1 AVDD AVSS VI_1A_ESD VI_1B_ESD VO2_ESD VO1_ESD VCM_ESD VB1 VB2 VB3 VB4 VI_2A_ESD VI_2B_ESD dda
-x2 IREF_ESD VB1 AVDD AVSS VB2 VB3 VB4 bias
-x3 AVDD AVSS IREF IREF_ESD ESD
-x4 AVDD AVSS VO2 VO2_ESD ESD
-x5 AVDD AVSS VI_1A VI_1A_ESD ESD
-x6 AVDD AVSS VO1 VO1_ESD ESD
-x7 AVDD AVSS VI_1B VI_1B_ESD ESD
-x8 AVDD AVSS VI_2A VI_2A_ESD ESD
-x9 AVDD AVSS VI_2B VI_2B_ESD ESD
-x10 AVDD AVSS VCM VCM_ESD ESD
+x1 AVDD AVSS VI_1A VI_1B VO2 VO1 VCM VB1 VB2 VB3 VB4 VI_2A VI_2B dda
+x2 IREF VB1 AVDD AVSS VB2 VB3 VB4 bias
 .ends
 
 * expanding   symbol:  INA_layout_v2/dda.sym # of pins=13
@@ -42,27 +34,6 @@ x1 IREF VB2 VB1 VB4 AVSS nbias_vb124
 x2 VB3 VB1 VB2 AVDD pbias_vb123
 x4 AVDD VB4 pbias_vb4
 x3 VB3 AVSS nbias_vb3
-.ends
-
-
-* expanding   symbol:  ESD/ESD.sym # of pins=4
-** sym_path: /home/lci-ufsc/Desktop/work_sky130/ESD/ESD.sym
-** sch_path: /home/lci-ufsc/Desktop/work_sky130/ESD/ESD.sch
-.subckt ESD AVDD AVSS PAD GATE
-*.PININFO AVDD:B AVSS:B PAD:B GATE:B
-D2 AVSS GATE sky130_fd_pr__diode_pw2nd_05v5 area=0.2025e12 pj=1.8e6
-D1[5] AVSS PAD sky130_fd_pr__diode_pw2nd_11v0 area=10e12 pj=22e6
-D1[4] AVSS PAD sky130_fd_pr__diode_pw2nd_11v0 area=10e12 pj=22e6
-D1[3] AVSS PAD sky130_fd_pr__diode_pw2nd_11v0 area=10e12 pj=22e6
-D1[2] AVSS PAD sky130_fd_pr__diode_pw2nd_11v0 area=10e12 pj=22e6
-D1[1] AVSS PAD sky130_fd_pr__diode_pw2nd_11v0 area=10e12 pj=22e6
-D3 GATE AVDD sky130_fd_pr__diode_pd2nw_05v5 area=0.2025e12 pj=1.8e6
-D4[5] PAD AVDD sky130_fd_pr__diode_pd2nw_11v0 area=10e12 pj=22e6
-D4[4] PAD AVDD sky130_fd_pr__diode_pd2nw_11v0 area=10e12 pj=22e6
-D4[3] PAD AVDD sky130_fd_pr__diode_pd2nw_11v0 area=10e12 pj=22e6
-D4[2] PAD AVDD sky130_fd_pr__diode_pd2nw_11v0 area=10e12 pj=22e6
-D4[1] PAD AVDD sky130_fd_pr__diode_pd2nw_11v0 area=10e12 pj=22e6
-XR1 GATE PAD AVSS sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
 .ends
 
 
