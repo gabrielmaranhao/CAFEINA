@@ -15,8 +15,10 @@
 # SPDX-License-Identifier: Apache-2.0
 
 #--------------------------------------------------------------------------------
-# Run LVS on the user_analog_project_wrapper layout, comparing against the
-# top-level xschem subcircuit from the wrapper testbench.
+# Run LVS on the example_por layout
 #
+# NOTE:  By specifying the testbench for the schematic-side netlist, the proper
+# includes used by the testbench simulation are picked up.  Otherwise, the LVS
+# itself compares just the simple_por subcircuit from the testbench.
 #--------------------------------------------------------------------------------
-netgen -batch lvs "user_analog_project_wrapper.spice user_analog_project_wrapper" "../xschem/analog_wrapper_tb.spice user_analog_project_wrapper" $PDK_ROOT/$PDK/libs.tech/netgen/$PDK\_setup.tcl comp.out
+netgen -batch lvs "example_por.spice example_por" "../xschem/example_por_tb.spice example_por" $PDK_ROOT/$PDK/libs.tech/netgen/$PDK\_setup.tcl comp.out
