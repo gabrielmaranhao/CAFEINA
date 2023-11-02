@@ -1,4 +1,4 @@
-v {xschem version=3.4.4 file_version=1.2
+v {xschem version=3.4.5 file_version=1.2
 }
 G {}
 K {}
@@ -248,7 +248,6 @@ N 60 430 60 480 {
 lab=vx}
 N 60 -80 60 -30 {
 lab=vy}
-C {INA/bias_network.sym} 130 -210 0 0 {name=x2}
 C {devices/lab_wire.sym} 310 -270 0 1 {name=p44 sig_type=std_logic lab=vb1}
 C {devices/lab_wire.sym} 310 -250 0 1 {name=p45 sig_type=std_logic lab=vb2}
 C {devices/lab_wire.sym} 310 -230 0 1 {name=p46 sig_type=std_logic lab=vb3}
@@ -323,7 +322,6 @@ device="ceramic capacitor"}
 C {devices/gnd.sym} 240 150 0 0 {name=l6 lab=GND}
 C {devices/lab_wire.sym} 200 70 0 1 {name=p4 sig_type=std_logic lab=vo2}
 C {devices/lab_wire.sym} -100 200 0 1 {name=p15 sig_type=std_logic lab=vo1}
-C {devices/gnd.sym} -240 -110 0 0 {name=l7 lab=GND}
 C {devices/lab_wire.sym} -240 -200 0 1 {name=p19 sig_type=std_logic lab=vcm}
 C {devices/vsource.sym} -240 -160 0 0 {name=VIN3 value=0.9}
 C {devices/lab_wire.sym} -290 350 0 0 {name=p20 sig_type=std_logic lab=vcm}
@@ -361,3 +359,5 @@ C {devices/ammeter.sym} 60 400 0 0 {name=V_ioU2}
 C {devices/ammeter.sym} 60 0 0 0 {name=V_ioU4}
 C {devices/ammeter.sym} 60 230 0 0 {name=V_ioU5}
 C {INA_layout_v2/dda.sym} -280 180 0 0 {name=x1}
+C {INA_layout_v2/bias/bias.sym} 130 -210 0 0 {name=x2}
+C {devices/gnd.sym} -240 -110 0 0 {name=l7 lab=GND}
