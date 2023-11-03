@@ -1,3 +1,4 @@
+** sch_path: /home/lci-ufsc/Desktop/work_sky130/user_analog_project_wrapper.sch
 .subckt user_analog_project_wrapper vdda1 vdda2 vssa1 vssa2 vccd1 vccd2 vssd1 vssd2 wb_clk_i
 + wb_rst_i wbs_stb_i wbs_cyc_i wbs_we_i wbs_sel_i[3] wbs_sel_i[2] wbs_sel_i[1] wbs_sel_i[0] wbs_dat_i[31]
 + wbs_dat_i[30] wbs_dat_i[29] wbs_dat_i[28] wbs_dat_i[27] wbs_dat_i[26] wbs_dat_i[25] wbs_dat_i[24] wbs_dat_i[23]
@@ -88,68 +89,353 @@
 *+ wbs_dat_o[31:0]:O la_data_in[127:0]:I la_data_out[127:0]:O io_in[26:0]:I io_in_3v3[26:0]:I user_clock2:I
 *+ io_out[26:0]:O io_oeb[26:0]:O gpio_analog[17:0]:B gpio_noesd[17:0]:B io_analog[10:0]:B io_clamp_high[2:0]:B
 *+ io_clamp_low[2:0]:B user_irq[2:0]:O la_oenb[127:0]:I
-x1 vdda1 vccd1 gpio_analog[3] io_out[11] io_out[12] vssa1 example_por
-x2 io_analog[4] vccd1 gpio_analog[7] io_out[15] io_out[16] vssa1 example_por
-R1 vssa1 io_clamp_low[2] sky130_fd_pr__res_generic_m3 W=11 L=0.25 m=1
-R2 vssa1 io_clamp_high[2] sky130_fd_pr__res_generic_m3 W=11 L=0.25 m=1
-R4 vssa1 io_clamp_low[1] sky130_fd_pr__res_generic_m3 W=11 L=0.25 m=1
-R5 vssa1 io_clamp_high[1] sky130_fd_pr__res_generic_m3 W=11 L=0.25 m=1
-R6 vssa1 io_clamp_low[0] sky130_fd_pr__res_generic_m3 W=11 L=0.25 m=1
-R7 io_analog[4] io_clamp_high[0] sky130_fd_pr__res_generic_m3 W=11 L=0.25 m=1
-R8 vssd1 io_oeb[12] sky130_fd_pr__res_generic_m3 W=0.56 L=0.49 m=1
-R9 vssd1 io_oeb[16] sky130_fd_pr__res_generic_m3 W=0.56 L=0.31 m=1
-R11 vssd1 io_oeb[11] sky130_fd_pr__res_generic_m3 W=0.56 L=0.58 m=1
-R12 vssd1 io_oeb[15] sky130_fd_pr__res_generic_m3 W=0.56 L=0.6 m=1
+x1 io_analog[0] vssa1 io_analog[4] io_analog[3] gpio_noesd[5] gpio_noesd[6] gpio_noesd[4]
++ io_analog[5] io_analog[1] io_analog[2] ina_top
 .ends
 
-* expanding   symbol:  example_por.sym # of pins=6
-* sym_path: /home/kanobailey/sky130/mpw-9/caravel_user_project_analog/xschem/example_por.sym
-* sch_path: /home/kanobailey/sky130/mpw-9/caravel_user_project_analog/xschem/example_por.sch
-.subckt example_por  vdd3v3 vdd1v8 porb_h porb_l por_l vss
-*.PININFO vdd3v3:B vss:B porb_h:O porb_l:O por_l:O vdd1v8:B
-XC1 net9 vss sky130_fd_pr__cap_mim_m3_1 W=30 L=30 MF=1 m=1
-XC2 vss net9 sky130_fd_pr__cap_mim_m3_2 W=30 L=30 MF=1 m=1
-XM1 net3 net7 net5 vdd3v3 sky130_fd_pr__pfet_g5v0d10v5 L=0.8 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1 
-XM2 net2 net3 vss vss sky130_fd_pr__nfet_g5v0d10v5 L=0.8 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1 
-XR1 net4 vdd3v3 vss sky130_fd_pr__res_xhigh_po_0p69 L=500 mult=1 m=1
-XM4 net5 net6 vdd3v3 vdd3v3 sky130_fd_pr__pfet_g5v0d10v5 L=0.8 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1 
-XM5 net3 net3 vss vss sky130_fd_pr__nfet_g5v0d10v5 L=0.8 W=14 nf=7 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1 
-XR2 vss net4 vss sky130_fd_pr__res_xhigh_po_0p69 L=150 mult=1 m=1
-XM7 net2 net2 net1 vdd3v3 sky130_fd_pr__pfet_g5v0d10v5 L=0.8 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1 
-XM8 net1 net1 vdd3v3 vdd3v3 sky130_fd_pr__pfet_g5v0d10v5 L=0.8 W=14 nf=7 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1 
-XM10 net7 net4 vss vss sky130_fd_pr__nfet_g5v0d10v5 L=0.8 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1 
-XM9 net7 net7 net6 vdd3v3 sky130_fd_pr__pfet_g5v0d10v5 L=0.8 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1 
-XM11 net6 net6 vdd3v3 vdd3v3 sky130_fd_pr__pfet_g5v0d10v5 L=0.8 W=16 nf=8 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1 
-XM12 net8 net1 vdd3v3 vdd3v3 sky130_fd_pr__pfet_g5v0d10v5 L=0.8 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1 
-XM13 net9 net2 net8 vdd3v3 sky130_fd_pr__pfet_g5v0d10v5 L=0.8 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1 
-XR3 vss vss vss sky130_fd_pr__res_xhigh_po_0p69 L=25 mult=2 m=2
-x2 net10 vss vss vdd3v3 vdd3v3 porb_h sky130_fd_sc_hvl__buf_8
-x3 net10 vss vss vdd1v8 vdd1v8 porb_l sky130_fd_sc_hvl__buf_8
-x4 net10 vss vss vdd1v8 vdd1v8 por_l sky130_fd_sc_hvl__inv_8
-x5 net9 vss vss vdd3v3 vdd3v3 net10 sky130_fd_sc_hvl__schmittbuf_1
+* expanding   symbol:  INA_layout_v2/ina_top.sym # of pins=10
+** sym_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/ina_top.sym
+** sch_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/ina_top.sch
+.subckt ina_top AVDD AVSS VI_1A VI_1B VO2 VO1 VCM IREF VI_2A VI_2B
+*.PININFO IREF:B VI_1A:B VI_1B:B VI_2A:B VI_2B:B VO2:B VO1:B VCM:B AVDD:B AVSS:B
+x1 AVDD AVSS VI_1A VI_1B VO2 VO1 VCM VB1 VB2 VB3 VB4 VI_2A VI_2B dda
+x2 IREF VB1 AVDD AVSS VB2 VB3 VB4 bias
+D3 AVSS VI_2A sky130_fd_pr__diode_pw2nd_05v5 area=0.2025e12 pj=1.8e6
+D4 AVSS VI_2B sky130_fd_pr__diode_pw2nd_05v5 area=0.2025e12 pj=1.8e6
+D5 AVSS VI_1B sky130_fd_pr__diode_pw2nd_05v5 area=0.2025e12 pj=1.8e6
+D6 AVSS VI_1A sky130_fd_pr__diode_pw2nd_05v5 area=0.2025e12 pj=1.8e6
+D7 AVSS IREF sky130_fd_pr__diode_pw2nd_05v5 area=0.2025e12 pj=1.8e6
+D2 AVSS VO1 sky130_fd_pr__diode_pw2nd_05v5 area=0.2025e12 pj=1.8e6
+D1 AVSS VO2 sky130_fd_pr__diode_pw2nd_05v5 area=0.2025e12 pj=1.8e6
+D8 AVSS VCM sky130_fd_pr__diode_pw2nd_05v5 area=0.2025e12 pj=1.8e6
 .ends
 
-** flattened .save nodes
+
+* expanding   symbol:  INA_layout_v2/dda.sym # of pins=13
+** sym_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/dda.sym
+** sch_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/dda.sch
+.subckt dda AVDD AVSS VI_1A VI_1B VO2 VO1 VCM VB1 VB2 VB3 VB4 VI_2A VI_2B
+*.PININFO AVDD:B VI_1A:B VI_1B:B VI_2A:B VI_2B:B VO1:B VO2:B VB1:B VB2:B VB3:B VB4:B VCM:B AVSS:B
+x1 AVDD AVDD VB1 AVDD VB1 VIT_P2 VIT_P1 pfets_8x
+x2 VIT_P1 VIT_P1 VI_1B AVDD VI_1A SUM_N SUM_P pfets_4x
+x3 VIT_P2 VIT_P2 VI_2B AVDD VI_2A SUM_P SUM_N pfets_4x
+x6 VD5 VD6 VB4 AVDD VB4 VO2 VO1 pfets_4x
+x7 AVDD AVDD VCMFB AVDD VCMFB VD6 VD5 pfets_4x
+x9 AVDD AVDD VD2 AVDD VD1 VD2 VD1 pfets_4x
+x5 VO1 VO2 VB3 VB3 AVSS SUM_N SUM_P nfets_2x
+x10 VD1 VCMFB VCM VO1 AVSS VIT_N1 VIT_N1 nfets_2x
+x11 VD2 VCMFB VCM VO2 AVSS VIT_N2 VIT_N2 nfets_2x
+x12 VIT_N1 VIT_N2 VB2 VB2 AVSS AVSS AVSS nfets_4x
+x4 SUM_P SUM_N VB2 VB2 AVSS AVSS AVSS nfets_4x
+x8 AVDD AVDD VCMFB AVDD VCMFB VCMFB VCMFB pfets_4x
+.ends
+
+
+* expanding   symbol:  INA_layout_v2/bias/bias.sym # of pins=7
+** sym_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/bias/bias.sym
+** sch_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/bias/bias.sch
+.subckt bias IREF VB1 AVDD AVSS VB2 VB3 VB4
+*.PININFO IREF:B VB1:B VB2:B VB3:B VB4:B AVDD:B AVSS:B
+x1 IREF VB2 VB1 VB4 AVSS nbias_vb124
+x2 VB3 VB1 VB2 AVDD pbias_vb123
+x4 AVDD VB4 pbias_vb4
+x3 VB3 AVSS nbias_vb3
+.ends
+
+
+* expanding   symbol:  INA_layout_v2/pfets_8x.sym # of pins=7
+** sym_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/pfets_8x.sym
+** sch_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/pfets_8x.sch
+.subckt pfets_8x VS1 VS2 VG2 VB VG1 VD2 VD1
+*.PININFO VS1:B VS2:B VB:B VG1:B VG2:B VD1:B VD2:B
+x1[2] VS1 VS2 VG2 VB VG1 VD2 VD1 pfets_4x
+x1[1] VS1 VS2 VG2 VB VG1 VD2 VD1 pfets_4x
+.ends
+
+
+* expanding   symbol:  INA_layout_v2/pfets_4x.sym # of pins=7
+** sym_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/pfets_4x.sym
+** sch_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/pfets_4x.sch
+.subckt pfets_4x VS1 VS2 VG2 VB VG1 VD2 VD1
+*.PININFO VS1:B VS2:B VB:B VG1:B VG2:B VD1:B VD2:B
+x1[4] VS1 VS2 VG2 VB VG1 VD2 VD1 pfets
+x1[3] VS1 VS2 VG2 VB VG1 VD2 VD1 pfets
+x1[2] VS1 VS2 VG2 VB VG1 VD2 VD1 pfets
+x1[1] VS1 VS2 VG2 VB VG1 VD2 VD1 pfets
+.ends
+
+
+* expanding   symbol:  INA_layout_v2/nfets_2x.sym # of pins=7
+** sym_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/nfets_2x.sym
+** sch_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/nfets_2x.sch
+.subckt nfets_2x VD1 VD2 VG2 VG1 VB VS2 VS1
+*.PININFO VS1:B VS2:B VB:B VG1:B VG2:B VD1:B VD2:B
+XM3[1] VB VB VB VB sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=9
+XM3[0] VB VB VB VB sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=9
+x1[2] VD1 VD2 VG2 VG1 VB VS2 VS1 nfets
+x1[1] VD1 VD2 VG2 VG1 VB VS2 VS1 nfets
+.ends
+
+
+* expanding   symbol:  INA_layout_v2/nfets_4x.sym # of pins=7
+** sym_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/nfets_4x.sym
+** sch_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/nfets_4x.sch
+.subckt nfets_4x VD1 VD2 VG2 VG1 VB VS2 VS1
+*.PININFO VS1:B VS2:B VB:B VG1:B VG2:B VD1:B VD2:B
+x1[2] VD1 VD2 VG2 VG1 VB VS2 VS1 nfets_2x
+x1[1] VD1 VD2 VG2 VG1 VB VS2 VS1 nfets_2x
+.ends
+
+
+* expanding   symbol:  INA_layout_v2/bias/nbias_vb124.sym # of pins=5
+** sym_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/bias/nbias_vb124.sym
+** sch_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/bias/nbias_vb124.sch
+.subckt nbias_vb124 IREF VB2 VB1 VB4 AVSS
+*.PININFO IREF:B VB1:B VB2:B VB4:B AVSS:B
+x1[5] AVSS AVSS IREF IREF nfet_2series
+x1[4] AVSS AVSS IREF IREF nfet_2series
+x1[3] AVSS AVSS IREF IREF nfet_2series
+x1[2] AVSS AVSS IREF IREF nfet_2series
+x1[1] AVSS AVSS IREF IREF nfet_2series
+x2[5] AVSS AVSS IREF VB1 nfet_2series
+x2[4] AVSS AVSS IREF VB1 nfet_2series
+x2[3] AVSS AVSS IREF VB1 nfet_2series
+x2[2] AVSS AVSS IREF VB1 nfet_2series
+x2[1] AVSS AVSS IREF VB1 nfet_2series
+x3[5] AVSS AVSS VB2 VB2 nfet_2series
+x3[4] AVSS AVSS VB2 VB2 nfet_2series
+x3[3] AVSS AVSS VB2 VB2 nfet_2series
+x3[2] AVSS AVSS VB2 VB2 nfet_2series
+x3[1] AVSS AVSS VB2 VB2 nfet_2series
+x4[5] AVSS AVSS VB2 VB4 nfet_2series
+x4[4] AVSS AVSS VB2 VB4 nfet_2series
+x4[3] AVSS AVSS VB2 VB4 nfet_2series
+x4[2] AVSS AVSS VB2 VB4 nfet_2series
+x4[1] AVSS AVSS VB2 VB4 nfet_2series
+XM1 AVSS AVSS AVSS AVSS sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=44
+.ends
+
+
+* expanding   symbol:  INA_layout_v2/bias/pbias_vb123.sym # of pins=4
+** sym_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/bias/pbias_vb123.sym
+** sch_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/bias/pbias_vb123.sch
+.subckt pbias_vb123 VB3 VB1 VB2 AVDD
+*.PININFO VB1:B VB2:B VB3:B AVDD:B
+x1[35] AVDD AVDD VB1 VB1 pfet_2series
+x1[34] AVDD AVDD VB1 VB1 pfet_2series
+x1[33] AVDD AVDD VB1 VB1 pfet_2series
+x1[32] AVDD AVDD VB1 VB1 pfet_2series
+x1[31] AVDD AVDD VB1 VB1 pfet_2series
+x1[30] AVDD AVDD VB1 VB1 pfet_2series
+x1[29] AVDD AVDD VB1 VB1 pfet_2series
+x1[28] AVDD AVDD VB1 VB1 pfet_2series
+x1[27] AVDD AVDD VB1 VB1 pfet_2series
+x1[26] AVDD AVDD VB1 VB1 pfet_2series
+x1[25] AVDD AVDD VB1 VB1 pfet_2series
+x1[24] AVDD AVDD VB1 VB1 pfet_2series
+x1[23] AVDD AVDD VB1 VB1 pfet_2series
+x1[22] AVDD AVDD VB1 VB1 pfet_2series
+x1[21] AVDD AVDD VB1 VB1 pfet_2series
+x1[20] AVDD AVDD VB1 VB1 pfet_2series
+x1[19] AVDD AVDD VB1 VB1 pfet_2series
+x1[18] AVDD AVDD VB1 VB1 pfet_2series
+x1[17] AVDD AVDD VB1 VB1 pfet_2series
+x1[16] AVDD AVDD VB1 VB1 pfet_2series
+x1[15] AVDD AVDD VB1 VB1 pfet_2series
+x1[14] AVDD AVDD VB1 VB1 pfet_2series
+x1[13] AVDD AVDD VB1 VB1 pfet_2series
+x1[12] AVDD AVDD VB1 VB1 pfet_2series
+x1[11] AVDD AVDD VB1 VB1 pfet_2series
+x1[10] AVDD AVDD VB1 VB1 pfet_2series
+x1[9] AVDD AVDD VB1 VB1 pfet_2series
+x1[8] AVDD AVDD VB1 VB1 pfet_2series
+x1[7] AVDD AVDD VB1 VB1 pfet_2series
+x1[6] AVDD AVDD VB1 VB1 pfet_2series
+x1[5] AVDD AVDD VB1 VB1 pfet_2series
+x1[4] AVDD AVDD VB1 VB1 pfet_2series
+x1[3] AVDD AVDD VB1 VB1 pfet_2series
+x1[2] AVDD AVDD VB1 VB1 pfet_2series
+x1[1] AVDD AVDD VB1 VB1 pfet_2series
+x2[35] AVDD AVDD VB1 VB3 pfet_2series
+x2[34] AVDD AVDD VB1 VB3 pfet_2series
+x2[33] AVDD AVDD VB1 VB3 pfet_2series
+x2[32] AVDD AVDD VB1 VB3 pfet_2series
+x2[31] AVDD AVDD VB1 VB3 pfet_2series
+x2[30] AVDD AVDD VB1 VB3 pfet_2series
+x2[29] AVDD AVDD VB1 VB3 pfet_2series
+x2[28] AVDD AVDD VB1 VB3 pfet_2series
+x2[27] AVDD AVDD VB1 VB3 pfet_2series
+x2[26] AVDD AVDD VB1 VB3 pfet_2series
+x2[25] AVDD AVDD VB1 VB3 pfet_2series
+x2[24] AVDD AVDD VB1 VB3 pfet_2series
+x2[23] AVDD AVDD VB1 VB3 pfet_2series
+x2[22] AVDD AVDD VB1 VB3 pfet_2series
+x2[21] AVDD AVDD VB1 VB3 pfet_2series
+x2[20] AVDD AVDD VB1 VB3 pfet_2series
+x2[19] AVDD AVDD VB1 VB3 pfet_2series
+x2[18] AVDD AVDD VB1 VB3 pfet_2series
+x2[17] AVDD AVDD VB1 VB3 pfet_2series
+x2[16] AVDD AVDD VB1 VB3 pfet_2series
+x2[15] AVDD AVDD VB1 VB3 pfet_2series
+x2[14] AVDD AVDD VB1 VB3 pfet_2series
+x2[13] AVDD AVDD VB1 VB3 pfet_2series
+x2[12] AVDD AVDD VB1 VB3 pfet_2series
+x2[11] AVDD AVDD VB1 VB3 pfet_2series
+x2[10] AVDD AVDD VB1 VB3 pfet_2series
+x2[9] AVDD AVDD VB1 VB3 pfet_2series
+x2[8] AVDD AVDD VB1 VB3 pfet_2series
+x2[7] AVDD AVDD VB1 VB3 pfet_2series
+x2[6] AVDD AVDD VB1 VB3 pfet_2series
+x2[5] AVDD AVDD VB1 VB3 pfet_2series
+x2[4] AVDD AVDD VB1 VB3 pfet_2series
+x2[3] AVDD AVDD VB1 VB3 pfet_2series
+x2[2] AVDD AVDD VB1 VB3 pfet_2series
+x2[1] AVDD AVDD VB1 VB3 pfet_2series
+x3[35] AVDD AVDD VB1 VB2 pfet_2series
+x3[34] AVDD AVDD VB1 VB2 pfet_2series
+x3[33] AVDD AVDD VB1 VB2 pfet_2series
+x3[32] AVDD AVDD VB1 VB2 pfet_2series
+x3[31] AVDD AVDD VB1 VB2 pfet_2series
+x3[30] AVDD AVDD VB1 VB2 pfet_2series
+x3[29] AVDD AVDD VB1 VB2 pfet_2series
+x3[28] AVDD AVDD VB1 VB2 pfet_2series
+x3[27] AVDD AVDD VB1 VB2 pfet_2series
+x3[26] AVDD AVDD VB1 VB2 pfet_2series
+x3[25] AVDD AVDD VB1 VB2 pfet_2series
+x3[24] AVDD AVDD VB1 VB2 pfet_2series
+x3[23] AVDD AVDD VB1 VB2 pfet_2series
+x3[22] AVDD AVDD VB1 VB2 pfet_2series
+x3[21] AVDD AVDD VB1 VB2 pfet_2series
+x3[20] AVDD AVDD VB1 VB2 pfet_2series
+x3[19] AVDD AVDD VB1 VB2 pfet_2series
+x3[18] AVDD AVDD VB1 VB2 pfet_2series
+x3[17] AVDD AVDD VB1 VB2 pfet_2series
+x3[16] AVDD AVDD VB1 VB2 pfet_2series
+x3[15] AVDD AVDD VB1 VB2 pfet_2series
+x3[14] AVDD AVDD VB1 VB2 pfet_2series
+x3[13] AVDD AVDD VB1 VB2 pfet_2series
+x3[12] AVDD AVDD VB1 VB2 pfet_2series
+x3[11] AVDD AVDD VB1 VB2 pfet_2series
+x3[10] AVDD AVDD VB1 VB2 pfet_2series
+x3[9] AVDD AVDD VB1 VB2 pfet_2series
+x3[8] AVDD AVDD VB1 VB2 pfet_2series
+x3[7] AVDD AVDD VB1 VB2 pfet_2series
+x3[6] AVDD AVDD VB1 VB2 pfet_2series
+x3[5] AVDD AVDD VB1 VB2 pfet_2series
+x3[4] AVDD AVDD VB1 VB2 pfet_2series
+x3[3] AVDD AVDD VB1 VB2 pfet_2series
+x3[2] AVDD AVDD VB1 VB2 pfet_2series
+x3[1] AVDD AVDD VB1 VB2 pfet_2series
+XM1 AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=96
+.ends
+
+
+* expanding   symbol:  INA_layout_v2/bias/pbias_vb4.sym # of pins=2
+** sym_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/bias/pbias_vb4.sym
+** sch_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/bias/pbias_vb4.sch
+.subckt pbias_vb4 AVDD VB4
+*.PININFO VB4:B AVDD:B
+XM1 net1 VB4 AVDD AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM2 net2 VB4 net1 AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM3 VB4 VB4 net2 AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM4 net3 VB4 AVDD AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM5 net4 VB4 net3 AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM6 VB4 VB4 net4 AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM7 net5 VB4 AVDD AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM8 net6 VB4 net5 AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM9 VB4 VB4 net6 AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM10 net7 VB4 AVDD AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM11 net8 VB4 net7 AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM12 VB4 VB4 net8 AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM13 net9 VB4 AVDD AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM14 net10 VB4 net9 AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM15 VB4 VB4 net10 AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM16[20] AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM16[19] AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM16[18] AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM16[17] AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM16[16] AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM16[15] AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM16[14] AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM16[13] AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM16[12] AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM16[11] AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM16[10] AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM16[9] AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM16[8] AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM16[7] AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM16[6] AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM16[5] AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM16[4] AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM16[3] AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM16[2] AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM16[1] AVDD AVDD AVDD AVDD sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  INA_layout_v2/bias/nbias_vb3.sym # of pins=2
+** sym_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/bias/nbias_vb3.sym
+** sch_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/bias/nbias_vb3.sch
+.subckt nbias_vb3 VB3 AVSS
+*.PININFO AVSS:B VB3:B
+x1 AVSS AVSS VB3 net1 nfet_2series
+x2 net1 AVSS VB3 VB3 nfet_2series
+XM1[14] AVSS AVSS AVSS AVSS sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XM1[13] AVSS AVSS AVSS AVSS sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XM1[12] AVSS AVSS AVSS AVSS sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XM1[11] AVSS AVSS AVSS AVSS sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XM1[10] AVSS AVSS AVSS AVSS sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XM1[9] AVSS AVSS AVSS AVSS sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XM1[8] AVSS AVSS AVSS AVSS sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XM1[7] AVSS AVSS AVSS AVSS sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XM1[6] AVSS AVSS AVSS AVSS sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XM1[5] AVSS AVSS AVSS AVSS sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XM1[4] AVSS AVSS AVSS AVSS sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XM1[3] AVSS AVSS AVSS AVSS sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XM1[2] AVSS AVSS AVSS AVSS sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XM1[1] AVSS AVSS AVSS AVSS sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  INA_layout_v2/pfets.sym # of pins=7
+** sym_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/pfets.sym
+** sch_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/pfets.sch
+.subckt pfets VS1 VS2 VG2 VB VG1 VD2 VD1
+*.PININFO VS1:B VS2:B VB:B VG1:B VG2:B VD1:B VD2:B
+XM1 VD1 VG1 VS1 VB sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=22
+XM2 VD2 VG2 VS2 VB sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=22
+XM3 VB VB VB VB sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=34
+.ends
+
+
+* expanding   symbol:  INA_layout_v2/nfets.sym # of pins=7
+** sym_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/nfets.sym
+** sch_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/nfets.sch
+.subckt nfets VD1 VD2 VG2 VG1 VB VS2 VS1
+*.PININFO VS1:B VS2:B VB:B VG1:B VG2:B VD1:B VD2:B
+XM1 VD1 VG1 VS1 VB sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=7
+XM2 VD2 VG2 VS2 VB sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=7
+XM3 VB VB VB VB sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=4
+.ends
+
+
+* expanding   symbol:  INA_layout_v2/bias/nfet_2series.sym # of pins=4
+** sym_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/bias/nfet_2series.sym
+** sch_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/bias/nfet_2series.sch
+.subckt nfet_2series S B G D
+*.PININFO S:B B:B G:B D:B
+XM1 D G net1 B sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XM2 net1 G S B sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  INA_layout_v2/bias/pfet_2series.sym # of pins=4
+** sym_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/bias/pfet_2series.sym
+** sch_path: /home/lci-ufsc/Desktop/work_sky130/INA_layout_v2/bias/pfet_2series.sch
+.subckt pfet_2series S B G D
+*.PININFO S:B B:B G:B D:B
+XM1 net1 G S B sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+XM2 D G net1 B sky130_fd_pr__pfet_01v8_hvt L=1 W=1 nf=1 m=1
+.ends
+
 .end
