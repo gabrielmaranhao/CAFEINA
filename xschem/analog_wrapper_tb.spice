@@ -172,6 +172,9 @@ plot V("io_out[11]") V("io_out[12]") V("io_out[15]") V("io_out[16]")  V("gpio_an
 *+ io_clamp_low[2:0]:B user_irq[2:0]:O la_oenb[127:0]:I
 x1 io_analog[0] vssa1 io_analog[4] io_analog[3] gpio_noesd[5] gpio_noesd[6] gpio_noesd[4]
 + io_analog[5] io_analog[1] io_analog[2] ina_top
+R8 vccd1 io_oeb[12] sky130_fd_pr__res_generic_m3 W=0.56 L=0.49 m=1
+R9 vccd1 io_oeb[13] sky130_fd_pr__res_generic_m3 W=0.56 L=0.31 m=1
+R11 vccd1 io_oeb[11] sky130_fd_pr__res_generic_m3 W=0.56 L=0.58 m=1
 .ends
 
 
