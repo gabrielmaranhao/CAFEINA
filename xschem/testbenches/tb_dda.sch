@@ -168,6 +168,58 @@ divy=8
 
 x2=12
 y2=30}
+B 2 390 -420 1190 -20 {flags=graph
+
+
+ypos1=0
+ypos2=2
+
+subdivy=1
+unity=1
+
+
+divx=10
+subdivx=10
+
+ylabmag=1.0
+
+
+dataset=-1
+unitx=1
+logx=1
+logy=0
+
+
+
+
+
+
+
+linewidth_mult=6
+
+
+
+x1=1.11022e-16
+
+
+
+
+
+
+
+
+color="5 4"
+node="\\"vo1 db20()\\"
+\\"vo2 db20()\\""
+
+
+
+y1=-40
+xlabmag=1
+divy=8
+
+y2=40
+x2=12}
 N 280 -270 340 -270 {
 lab=vb1}
 N 280 -250 340 -250 {
@@ -240,13 +292,13 @@ N -420 190 -370 190 {
 lab=vx}
 N -420 210 -370 210 {
 lab=vy}
-N 60 90 60 140 {
+N 40 140 40 190 {
 lab=vo2}
-N 60 260 60 310 {
+N 40 310 40 360 {
 lab=vo1}
-N 60 430 60 480 {
+N 40 480 40 530 {
 lab=vx}
-N 60 -80 60 -30 {
+N 40 -30 40 20 {
 lab=vy}
 C {devices/lab_wire.sym} 310 -270 0 1 {name=p44 sig_type=std_logic lab=vb1}
 C {devices/lab_wire.sym} 310 -250 0 1 {name=p45 sig_type=std_logic lab=vb2}
@@ -333,31 +385,31 @@ C {devices/lab_wire.sym} -420 170 0 0 {name=p23 sig_type=std_logic lab=vin2}
 C {devices/lab_wire.sym} -420 190 0 0 {name=p17 sig_type=std_logic lab=vx
 }
 C {devices/lab_wire.sym} -420 210 0 0 {name=p24 sig_type=std_logic lab=vy}
-C {devices/res.sym} 60 60 0 0 {name=R2x
+C {devices/ammeter.sym} -160 160 3 0 {name=V_ioU3}
+C {devices/ammeter.sym} -160 200 3 0 {name=V_ioU1}
+C {INA_layout_v2/dda.sym} -280 180 0 0 {name=x1}
+C {INA_layout_v2/bias/bias.sym} 130 -210 0 0 {name=x2}
+C {devices/gnd.sym} -240 -110 0 0 {name=l7 lab=GND}
+C {devices/res.sym} 40 110 0 0 {name=R2x
 value=10k
 footprint=1206
 device=resistor
 m=1}
-C {devices/res.sym} 60 170 0 0 {name=R1
+C {devices/res.sym} 40 220 0 0 {name=R1
 value=60k
 footprint=1206
 device=resistor
 m=1}
-C {devices/res.sym} 60 340 0 0 {name=R2y
+C {devices/res.sym} 40 390 0 0 {name=R2y
 value=10k
 footprint=1206
 device=resistor
 m=1}
-C {devices/lab_wire.sym} 60 290 0 1 {name=p25 sig_type=std_logic lab=vo1}
-C {devices/lab_wire.sym} 60 120 0 1 {name=p26 sig_type=std_logic lab=vo2}
-C {devices/lab_wire.sym} 60 460 0 0 {name=p27 sig_type=std_logic lab=vx
+C {devices/lab_wire.sym} 40 340 0 1 {name=p25 sig_type=std_logic lab=vo1}
+C {devices/lab_wire.sym} 40 170 0 1 {name=p26 sig_type=std_logic lab=vo2}
+C {devices/lab_wire.sym} 40 510 0 0 {name=p27 sig_type=std_logic lab=vx
 }
-C {devices/lab_wire.sym} 60 -60 0 0 {name=p28 sig_type=std_logic lab=vy}
-C {devices/ammeter.sym} -160 160 3 0 {name=V_ioU3}
-C {devices/ammeter.sym} -160 200 3 0 {name=V_ioU1}
-C {devices/ammeter.sym} 60 400 0 0 {name=V_ioU2}
-C {devices/ammeter.sym} 60 0 0 0 {name=V_ioU4}
-C {devices/ammeter.sym} 60 230 0 0 {name=V_ioU5}
-C {INA_layout_v2/dda.sym} -280 180 0 0 {name=x1}
-C {INA_layout_v2/bias/bias.sym} 130 -210 0 0 {name=x2}
-C {devices/gnd.sym} -240 -110 0 0 {name=l7 lab=GND}
+C {devices/lab_wire.sym} 40 -10 0 0 {name=p28 sig_type=std_logic lab=vy}
+C {devices/ammeter.sym} 40 450 0 0 {name=V_ioU2}
+C {devices/ammeter.sym} 40 50 0 0 {name=V_ioU4}
+C {devices/ammeter.sym} 40 280 0 0 {name=V_ioU5}

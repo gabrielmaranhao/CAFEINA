@@ -1,9 +1,0 @@
-magic
-tech sky130A
-magscale 1 2
-timestamp 1698888477
-use sky130_fd_pr__diode_pw2nd_05v5_FT76RJ  sky130_fd_pr__diode_pw2nd_05v5_FT76RJ_0
-timestamp 1698888477
-transform 1 0 130 0 1 130
-box -831 78 -485 424
-<< end >>

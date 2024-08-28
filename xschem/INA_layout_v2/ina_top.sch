@@ -70,7 +70,7 @@ lab=VI_1A}
 N 120 330 120 350 {
 lab=AVSS}
 N 120 250 120 270 {
-lab=VO1}
+lab=VCM}
 C {devices/iopin.sym} -530 30 0 1 {name=p1 lab=IREF}
 C {INA_layout_v2/dda.sym} 130 -40 0 0 {name=x1}
 C {devices/iopin.sym} -10 -70 0 1 {name=p2 lab=VI_1A}
