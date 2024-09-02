@@ -36,7 +36,7 @@ linewidth_mult=6
 
 
 
-x1=0
+x1=-1.110223e-16
 
 
 
@@ -112,7 +112,7 @@ ph_vo2"
 
 divy=10
 x2=12
-x1=0
+x1=-1.110223e-16
 y1=0
 y2=200}
 B 2 390 -820 1190 -420 {flags=graph
@@ -146,7 +146,7 @@ linewidth_mult=6
 
 
 
-x1=0
+x1=-1.110223e-16
 
 
 
@@ -199,7 +199,7 @@ linewidth_mult=6
 
 
 
-x1=0
+x1=-1.110223e-16
 
 
 
@@ -272,14 +272,30 @@ N -420 190 -370 190 {
 lab=vx}
 N -420 210 -370 210 {
 lab=vy}
-N 60 90 60 140 {
+N 30 60 70 60 {
 lab=vo2}
-N 60 260 60 310 {
-lab=vo1}
-N 60 430 60 480 {
+N 70 60 70 80 {
+lab=vo2}
+N 70 140 70 200 {
 lab=vx}
-N 60 -80 60 -30 {
+N 30 180 70 180 {
+lab=vx}
+N 30 310 70 310 {
+lab=vo1}
+N 70 310 70 330 {
+lab=vo1}
+N 70 390 70 440 {
 lab=vy}
+N 30 420 70 420 {
+lab=vy}
+N 70 500 70 560 {
+lab=vss}
+N 70 260 70 290 {
+lab=vss}
+N -190 160 -130 160 {
+lab=vo2}
+N -190 200 -130 200 {
+lab=vo1}
 C {devices/vsource.sym} -530 -190 0 0 {name=VDD value=1.8}
 C {devices/vsource.sym} -530 -100 0 0 {name=VSS value=0}
 C {devices/gnd.sym} -530 -50 0 0 {name=l1 lab=GND}
@@ -298,12 +314,14 @@ C {devices/lab_wire.sym} -420 150 0 0 {name=p13 sig_type=std_logic lab=vin1}
 C {devices/isource.sym} -440 300 2 0 {name=I0 value=2.3u}
 C {devices/gnd.sym} -440 350 0 0 {name=l5 lab=GND}
 C {devices/vsource.sym} -430 -180 0 0 {name=VIN1 value=0}
-C {devices/code_shown.sym} -890 -320 0 0 {name=NGSPICE only_toplevel=false value="
-*dc VIN2 0.48 0.52 0.1m
+C {devices/code_shown.sym} -1380 -180 0 0 {name=NGSPICE only_toplevel=false value="
+
+.option gmin = 1e-16
+.option klu
+
 .control
 save all
 
-set temp = 25
 ac dec 10 1 1e12
 
 let ph_vo2 = 180*cph(vo2)/pi
@@ -313,12 +331,12 @@ save ph_vo1
 
 remzerovec
 write tb_dda_pex.raw
-wrdata 
+wrdata /foss/designs/CAFEINA/xschem/testbenches/output_sch.txt V(vo1) V(vo2) ph_vo1 ph_vo2
+set appendwrite
 
-
-*op
-*remzerovec
-*write tb_dda_pex.raw
+op
+remzerovec
+write tb_dda_pex.raw
 
 .endc
 "}
@@ -356,38 +374,40 @@ C {devices/lab_wire.sym} -420 170 0 0 {name=p23 sig_type=std_logic lab=vin2}
 C {devices/lab_wire.sym} -420 190 0 0 {name=p17 sig_type=std_logic lab=vx
 }
 C {devices/lab_wire.sym} -420 210 0 0 {name=p24 sig_type=std_logic lab=vy}
-C {devices/res.sym} 60 60 0 0 {name=R2x
-value=10k
-footprint=1206
-device=resistor
-m=1}
-C {devices/res.sym} 60 170 0 0 {name=R1
-value=60k
-footprint=1206
-device=resistor
-m=1}
-C {devices/res.sym} 60 340 0 0 {name=R2y
-value=10k
-footprint=1206
-device=resistor
-m=1}
-C {devices/lab_wire.sym} 60 290 0 1 {name=p25 sig_type=std_logic lab=vo1}
-C {devices/lab_wire.sym} 60 120 0 1 {name=p26 sig_type=std_logic lab=vo2}
-C {devices/lab_wire.sym} 60 460 0 0 {name=p27 sig_type=std_logic lab=vx
+C {devices/lab_wire.sym} 30 60 0 0 {name=p26 sig_type=std_logic lab=vo2}
+C {devices/lab_wire.sym} 30 180 0 0 {name=p27 sig_type=std_logic lab=vx
 }
-C {devices/lab_wire.sym} 60 -60 0 0 {name=p28 sig_type=std_logic lab=vy}
-C {devices/ammeter.sym} -160 160 3 0 {name=V_ioU3}
-C {devices/ammeter.sym} -160 200 3 0 {name=V_ioU1}
-C {devices/ammeter.sym} 60 400 0 0 {name=V_ioU2}
-C {devices/ammeter.sym} 60 0 0 0 {name=V_ioU4}
-C {devices/ammeter.sym} 60 230 0 0 {name=V_ioU5}
 C {devices/gnd.sym} -240 -110 0 0 {name=l7 lab=GND}
 C {devices/code_shown.sym} -780 410 0 0 {name=DUT only_toplevel=false value="
-.include "/foss/designs/CAFEINA/gds/cafeina_gds/cafeina_top_level.spice"
+*.include "/foss/designs/CAFEINA/gds/cafeina_gds/cafeina_top_level.spice"
 
-XCAFE  vin1 vin2 vy vx vo1 vo2 vcm vss vdd iref cafeina_top_level
+*XCAFE  vin1 vin2 vy vx vo1 vo2 vcm vss vdd iref cafeina_top_level
 
 "}
 C {/foss/designs/CAFEINA/xschem/INA_layout_v2/ina_top.sym} -280 180 0 0 {name=x3
-spice_ignore=true}
+}
 C {devices/lab_wire.sym} -390 270 0 0 {name=p1 sig_type=std_logic lab=iref}
+C {devices/res.sym} 70 110 0 0 {name=R2
+value=90k
+footprint=1206
+device=resistor
+m=1}
+C {devices/res.sym} 70 230 0 0 {name=R3
+value=10k
+footprint=1206
+device=resistor
+m=1}
+C {devices/res.sym} 70 360 0 0 {name=R4
+value=90k
+footprint=1206
+device=resistor
+m=1}
+C {devices/res.sym} 70 470 0 0 {name=R5
+value=10k
+footprint=1206
+device=resistor
+m=1}
+C {devices/lab_wire.sym} 30 310 0 0 {name=p2 sig_type=std_logic lab=vo1}
+C {devices/lab_wire.sym} 30 420 0 0 {name=p3 sig_type=std_logic lab=vy}
+C {devices/lab_wire.sym} 70 560 0 0 {name=p7 sig_type=std_logic lab=vss}
+C {devices/lab_wire.sym} 70 290 0 0 {name=p9 sig_type=std_logic lab=vss}

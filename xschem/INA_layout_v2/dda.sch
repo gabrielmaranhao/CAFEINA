@@ -58,9 +58,9 @@ lab=VO2}
 N 410 220 410 250 {
 lab=AVSS}
 N 360 220 360 300 {
-lab=#net1}
+lab=SUM_P}
 N 460 220 460 300 {
-lab=#net2}
+lab=SUM_N}
 N 360 550 460 550 {
 lab=AVSS}
 N 670 130 700 130 {
@@ -72,11 +72,11 @@ lab=VB2}
 N -600 30 -180 30 {
 lab=SUM_N}
 N -700 -40 -700 -0 {
-lab=#net3}
+lab=SUM_P}
 N -700 60 -80 60 {
 lab=SUM_P}
 N -80 -40 -80 -0 {
-lab=#net4}
+lab=SUM_P}
 N 1050 -480 1150 -480 {
 lab=AVDD}
 N 920 -390 950 -390 {
@@ -144,9 +144,9 @@ lab=VCMFB}
 N 1280 -390 1280 -300 {
 lab=VCMFB}
 N -340 -300 -290 -300 {
-lab=#net5}
+lab=VIT_P2}
 N -290 -300 -290 -280 {
-lab=#net5}
+lab=VIT_P2}
 N -290 -220 -220 -220 {
 lab=VIT_P2}
 N -220 -300 -220 -220 {
@@ -154,9 +154,9 @@ lab=VIT_P2}
 N -220 -300 -180 -300 {
 lab=VIT_P2}
 N -500 -300 -440 -300 {
-lab=#net6}
+lab=VIT_P1}
 N -500 -300 -500 -280 {
-lab=#net6}
+lab=VIT_P1}
 N -550 -220 -500 -220 {
 lab=VIT_P1}
 N -550 -300 -550 -220 {
@@ -168,7 +168,7 @@ lab=SUM_P}
 N 230 190 230 220 {
 lab=SUM_P}
 N 230 280 360 280 {
-lab=#net1}
+lab=SUM_P}
 N 580 200 580 210 {
 lab=SUM_N}
 N 580 210 580 220 {
@@ -176,15 +176,15 @@ lab=SUM_N}
 N 540 220 580 220 {
 lab=SUM_N}
 N 460 280 540 280 {
-lab=#net2}
+lab=SUM_N}
 N 360 360 360 370 {
-lab=#net7}
+lab=#net1}
 N 460 360 460 370 {
-lab=#net8}
+lab=#net2}
 N -600 -40 -600 -30 {
-lab=#net9}
+lab=SUM_N}
 N -180 -40 -180 -30 {
-lab=#net10}
+lab=SUM_N}
 N 360 -580 360 -560 {
 lab=AVDD}
 N 460 -580 460 -560 {
@@ -192,9 +192,25 @@ lab=AVDD}
 N 410 -580 410 -480 {
 lab=AVDD}
 N 360 -500 360 -480 {
-lab=#net11}
+lab=#net3}
 N 460 -500 460 -480 {
-lab=#net12}
+lab=#net4}
+N -180 -30 -180 30 {
+lab=SUM_N}
+N -80 -0 -80 60 {
+lab=SUM_P}
+N -600 -30 -600 30 {
+lab=SUM_N}
+N -700 0 -700 60 {
+lab=SUM_P}
+N -500 -280 -500 -220 {
+lab=VIT_P1}
+N -290 -280 -290 -220 {
+lab=VIT_P2}
+N 230 220 230 280 {
+lab=SUM_P}
+N 540 220 540 280 {
+lab=SUM_N}
 C {devices/iopin.sym} -410 -480 1 1 {name=p1 lab=AVDD}
 C {devices/iopin.sym} -830 -130 0 1 {name=p2 lab=VI_1A}
 C {devices/iopin.sym} -470 -130 0 0 {name=p3 lab=VI_1B}
@@ -256,15 +272,7 @@ C {INA_layout_v2/nfets_2x.sym} 1350 130 0 1 {name=x11}
 C {INA_layout_v2/nfets_4x.sym} 1100 390 0 0 {name=x12}
 C {INA_layout_v2/nfets_4x.sym} 410 460 0 0 {name=x4}
 C {INA_layout_v2/pfets_4x.sym} 1100 -390 0 0 {name=x8}
-C {devices/ammeter.sym} -290 -250 0 0 {name=VITn savecurrent=true spice_ignore=0}
-C {devices/ammeter.sym} -500 -250 0 0 {name=VITp savecurrent=true spice_ignore=0}
-C {devices/ammeter.sym} 230 250 0 0 {name=Vamp1 savecurrent=true spice_ignore=0}
-C {devices/ammeter.sym} 540 250 0 0 {name=Vamp2 savecurrent=true spice_ignore=0}
 C {devices/ammeter.sym} 360 330 0 1 {name=Vamp3 savecurrent=true spice_ignore=0}
 C {devices/ammeter.sym} 460 330 0 0 {name=Vamp4 savecurrent=true spice_ignore=0}
-C {devices/ammeter.sym} -700 30 0 1 {name=Vamp5 savecurrent=true spice_ignore=0}
-C {devices/ammeter.sym} -180 0 0 0 {name=Vamp6 savecurrent=true spice_ignore=0}
-C {devices/ammeter.sym} -600 0 0 0 {name=Vamp7 savecurrent=true spice_ignore=0}
-C {devices/ammeter.sym} -80 30 0 0 {name=Vamp8 savecurrent=true spice_ignore=0}
 C {devices/ammeter.sym} 360 -530 0 1 {name=Vamp9 savecurrent=true spice_ignore=0}
 C {devices/ammeter.sym} 460 -530 0 0 {name=Vamp10 savecurrent=true spice_ignore=0}

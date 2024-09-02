@@ -1,4 +1,4 @@
-v {xschem version=3.4.4 file_version=1.2
+v {xschem version=3.4.5 file_version=1.2
 }
 G {}
 K {}
@@ -151,11 +151,16 @@ N 560 -540 570 -540 {
 lab=AVDD}
 N 700 -540 710 -540 {
 lab=AVDD}
-N 440 -590 480 -590 {}
-N 480 -650 480 -590 {}
-N 440 -650 480 -650 {}
-N 440 -650 440 -590 {}
-N 480 -590 480 -540 {}
+N 440 -590 480 -590 {
+lab=AVDD}
+N 480 -650 480 -590 {
+lab=AVDD}
+N 440 -650 480 -650 {
+lab=AVDD}
+N 440 -650 440 -590 {
+lab=AVDD}
+N 480 -590 480 -540 {
+lab=AVDD}
 N 430 -540 480 -540 {
 lab=AVDD}
 C {devices/iopin.sym} 840 -200 0 0 {name=p20 lab=VB4}
