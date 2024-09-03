@@ -36,7 +36,7 @@ linewidth_mult=6
 
 
 
-x1=-1.110223e-16
+x1=0
 
 
 
@@ -51,11 +51,11 @@ node="\\"vo1 db20()\\"
 
 
 
-y1=-73
+y1=-63
 xlabmag=1
 divy=8
 
-y2=21
+y2=41
 x2=12}
 B 2 390 -20 1190 380 {flags=graph
 
@@ -112,7 +112,7 @@ ph_vo2"
 
 divy=10
 x2=12
-x1=-1.110223e-16
+x1=0
 y1=0
 y2=200}
 B 2 390 -820 1190 -420 {flags=graph
@@ -146,7 +146,7 @@ linewidth_mult=6
 
 
 
-x1=-1.110223e-16
+x1=0
 
 
 
@@ -161,13 +161,13 @@ node="\\"vo1\\"
 
 
 
-y1=-5
+y1=0.00077
 xlabmag=1
 divy=8
 
 
 x2=12
-y2=30}
+y2=13}
 B 2 390 -420 1190 -20 {flags=graph
 
 
@@ -199,7 +199,7 @@ linewidth_mult=6
 
 
 
-x1=-1.110223e-16
+x1=0
 
 
 
@@ -368,7 +368,7 @@ C {devices/gnd.sym} 240 150 0 0 {name=l6 lab=GND}
 C {devices/lab_wire.sym} 200 70 0 1 {name=p4 sig_type=std_logic lab=vo2}
 C {devices/lab_wire.sym} -100 200 0 1 {name=p15 sig_type=std_logic lab=vo1}
 C {devices/lab_wire.sym} -240 -200 0 1 {name=p19 sig_type=std_logic lab=vcm}
-C {devices/vsource.sym} -240 -160 0 0 {name=VIN3 value=0.9}
+C {devices/vsource.sym} -240 -160 0 0 {name=VIN3 value=1}
 C {devices/lab_wire.sym} -290 350 0 0 {name=p20 sig_type=std_logic lab=vcm}
 C {devices/lab_wire.sym} -420 170 0 0 {name=p23 sig_type=std_logic lab=vin2}
 C {devices/lab_wire.sym} -420 190 0 0 {name=p17 sig_type=std_logic lab=vx
@@ -388,22 +388,22 @@ C {/foss/designs/CAFEINA/xschem/INA_layout_v2/ina_top.sym} -280 180 0 0 {name=x3
 }
 C {devices/lab_wire.sym} -390 270 0 0 {name=p1 sig_type=std_logic lab=iref}
 C {devices/res.sym} 70 110 0 0 {name=R2
-value=90k
+value=900k
 footprint=1206
 device=resistor
 m=1}
 C {devices/res.sym} 70 230 0 0 {name=R3
-value=10k
+value=100k
 footprint=1206
 device=resistor
 m=1}
 C {devices/res.sym} 70 360 0 0 {name=R4
-value=90k
+value=900k
 footprint=1206
 device=resistor
 m=1}
 C {devices/res.sym} 70 470 0 0 {name=R5
-value=10k
+value=100k
 footprint=1206
 device=resistor
 m=1}
